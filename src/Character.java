@@ -1,4 +1,4 @@
-package cw.characters;
+//package cw.characters;
 
 public abstract class Character {
 	private int hp;
