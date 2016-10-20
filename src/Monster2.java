@@ -1,4 +1,4 @@
-package cw.characters;
+//package cw.characters;
 
 import java.util.Random;
 
