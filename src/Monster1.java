@@ -1,4 +1,4 @@
-package cw.characters;
+//package cw.characters;
 
 public class Monster1 extends Monster {
 	
