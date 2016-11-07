@@ -3,12 +3,13 @@ package packageRPG.state;
 import java.awt.Graphics;
 
 import packageRPG.Game;
+import packageRPG.Handler;
 import packageRPG.gfx.Assets;
 
 public class MenuState extends State {
 
-	public MenuState(Game game){
-		super(game);
+	public MenuState(Handler handler){
+		super(handler);
 	}
 	
 	@Override

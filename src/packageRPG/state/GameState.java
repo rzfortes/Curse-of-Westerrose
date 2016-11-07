@@ -3,6 +3,7 @@ package packageRPG.state;
 import java.awt.Graphics;
 
 import packageRPG.Game;
+import packageRPG.Handler;
 import packageRPG.entities.creatures.Player;
 import packageRPG.gfx.Assets;
 import packageRPG.maps.Maps;
@@ -13,10 +14,12 @@ public class GameState extends State {
 	private Player player;
 	private Maps map;
 	
-	public GameState(Game game){
-		super(game);
-		player = new Player(game,100,100);
-		map = new Maps(game, "resources/maps/world1.txt");
+	public GameState(Handler handler){
+		super(handler);
+		
+		map = new Maps(handler, "resources/maps/world1.txt");
+		handler.setMap(map); 
+		player = new Player(handler,100,100);
 		
 		//game.getGameCamera().move(0, 0);
 	}
