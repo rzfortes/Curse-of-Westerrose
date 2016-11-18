@@ -2,6 +2,7 @@ package packageRPG;
 
 import packageRPG.gfx.GameCamera;
 import packageRPG.input.KeyManager;
+import packageRPG.input.MouseManager;
 import packageRPG.maps.Maps;
 
 public class Handler {
@@ -19,6 +20,10 @@ public class Handler {
 	
 	public KeyManager getKeyManager(){
 		return game.getKeyManager();
+	}
+	
+	public MouseManager getMouseManager() {
+		return game.getMouseManager();
 	}
 	
 	public int getWidth(){
@@ -45,5 +50,6 @@ public class Handler {
 	public void setMap(Maps map) {
 		this.map = map;
 	}
+	
 	
 }

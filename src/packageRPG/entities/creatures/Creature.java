@@ -1,6 +1,5 @@
 package packageRPG.entities.creatures;
 
-import packageRPG.Game;
 import packageRPG.Handler;
 import packageRPG.entities.Entity;
 import packageRPG.tiles.Tile;
@@ -8,28 +7,33 @@ import packageRPG.tiles.Tile;
 
 public abstract class Creature extends Entity{
 	
-	public static final int DEFAULT_HEALTH = 10;
+	//private BufferedImage healthBackground, healthForeground, healthBorder;
+	
 	public static final float DEFAULT_SPEED = 3.0f;
 	public static int DEFAULT_CREATURE_WIDTH = 64;
 	public static int DEFAULT_CREATURE_HEIGHT = 64;
+	public static int DEFAULT_HUNGERBAR = 100;
 	
-	protected int health;
 	protected float speed;
 	protected float xMove, yMove;
+	protected int hunger;
 	
 	
-	public Creature(Handler handler,float x, float y, int width, int height) {
-		super(handler,x, y,width, height);
-		health = DEFAULT_HEALTH;
+	public Creature(Handler handler,float x, float y, int width, int height, int life) {
+		super(handler,x, y,width, height, life);
 		speed = DEFAULT_SPEED;
 		xMove = 0;
 		yMove = 0;
-		
+		hunger = DEFAULT_HUNGERBAR;
 	}
 	
 	public void move(){
-		moveX();
-		moveY();
+		if(!checkEntityCollisions(xMove, 0f)) {
+			moveX();
+		}
+		if(!checkEntityCollisions(0f, yMove)) {
+			moveY();
+		}
 	}
 	
 	public void moveX(){
@@ -42,7 +46,7 @@ public abstract class Creature extends Entity{
 					!collisionWithTile(tx, (int)(y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
 				x+= xMove;
 			}else{
-				x = tx*Tile.TILEWIDTH - bounds.x - bounds.width - 1;
+				x = tx * Tile.TILEWIDTH - bounds.x - bounds.width - 1;
 			}
 		}
 		else if(xMove<0){// moving left
@@ -52,7 +56,7 @@ public abstract class Creature extends Entity{
 					!collisionWithTile(tx, (int)(y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
 				x+= xMove;
 			}else{
-				x = tx* Tile.TILEWIDTH + Tile.TILEWIDTH - bounds.x;
+				x = tx * Tile.TILEWIDTH + Tile.TILEWIDTH - bounds.x;
 			}
 		}
 		
@@ -66,7 +70,7 @@ public abstract class Creature extends Entity{
 					!collisionWithTile((int)(x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
 					y += yMove;
 			}else{
-				y = ty*Tile.TILEHEIGHT + Tile.TILEHEIGHT - bounds.y;
+				y = ty * Tile.TILEHEIGHT + Tile.TILEHEIGHT - bounds.y;
 			
 			}
 		}
@@ -77,7 +81,7 @@ public abstract class Creature extends Entity{
 						!collisionWithTile((int)(x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
 						y += yMove;
 				}else{
-					y = ty* Tile.TILEHEIGHT - bounds.y - bounds.height-1;
+					y = ty * Tile.TILEHEIGHT - bounds.y - bounds.height-1;
 				}
 		}
 	}

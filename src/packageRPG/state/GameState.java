@@ -2,42 +2,28 @@ package packageRPG.state;
 
 import java.awt.Graphics;
 
-import packageRPG.Game;
 import packageRPG.Handler;
-import packageRPG.entities.creatures.Player;
-import packageRPG.gfx.Assets;
 import packageRPG.maps.Maps;
-import packageRPG.tiles.Tile;
 
 public class GameState extends State {
 
-	private Player player;
 	private Maps map;
 	
 	public GameState(Handler handler){
 		super(handler);
 		
-		map = new Maps(handler, "resources/maps/world1.txt");
+		map = new Maps(handler, "resources/maps/world2.txt");
 		handler.setMap(map); 
-		player = new Player(handler,100,100);
-		
-		//game.getGameCamera().move(0, 0);
 	}
 	
 	@Override
 	public void update() {
 		map.update();
-		player.update();
-	
-		
 	}
 
 	@Override
 	public void render(Graphics g) {
-		//g.drawImage(Assets.dirt, 0, 0, null);
 		map.render(g);
-		player.render(g);
-		//Tile.tiles[2].render(g, 0 , 0);
 		
 	}
 

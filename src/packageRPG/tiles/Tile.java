@@ -9,11 +9,14 @@ public class Tile {
 	public static Tile grassTile = new GrassTile(0);
 	public static Tile dirtTile = new DirtTile(1);
 	public static Tile rockTile = new RockTile(2);
+	public static Tile sandTile = new SandTile(4);
+	public static Tile desertBorderTile = new DesertBorderTile(3);
+	public static Tile pathTile = new PathTile(5);
 	
 	
 	//Class
-	public static final int TILEWIDTH = 64;
-	public static final int TILEHEIGHT = 64;
+	public static final int TILEWIDTH = 48;
+	public static final int TILEHEIGHT = 48;
 	
 	protected BufferedImage texture;
 	protected final int id;  //way to identify each tile 

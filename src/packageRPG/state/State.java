@@ -2,7 +2,6 @@ package packageRPG.state;
 
 import java.awt.Graphics;
 
-import packageRPG.Game;
 import packageRPG.Handler;
 
 public abstract class State {

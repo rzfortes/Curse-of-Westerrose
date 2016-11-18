@@ -2,16 +2,13 @@ package packageRPG;
 
 import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
-
-
 import packageRPG.display.Display;
 import packageRPG.gfx.Assets;
 import packageRPG.gfx.GameCamera;
-import packageRPG.gfx.ImageLoader;
-import packageRPG.gfx.SpriteSheet;
 import packageRPG.input.KeyManager;
+import packageRPG.input.MouseManager;
 import packageRPG.state.GameState;
+import packageRPG.state.HowToPlayState;
 import packageRPG.state.MenuState;
 import packageRPG.state.State;
 
@@ -29,11 +26,13 @@ public class Game implements Runnable{
 	private Graphics g;
 	
 	//states
-	private State gameState;
-	private State menuState;
+	public State gameState;
+	public State menuState;
+	public State howtoplayState;
 	
 //input
 	private KeyManager keyManager;
+	private MouseManager mouseManager;
 	
 	//camera
 	private GameCamera gameCamera;
@@ -48,22 +47,28 @@ public class Game implements Runnable{
 		this.title = title;
 		
 		keyManager = new KeyManager();
-		
+		mouseManager = new MouseManager();
 		
 	}
 	
 	private void init(){
 		display = new Display(title, width,height);
-		display.getFrame().addKeyListener(keyManager);;
+		display.getFrame().addKeyListener(keyManager);
+		display.getFrame().addMouseListener(mouseManager);
+		display.getFrame().addMouseMotionListener(mouseManager);
+		display.getCanvas().addMouseListener(mouseManager);
+		display.getCanvas().addMouseMotionListener(mouseManager);
 		Assets.init();
 		
-		gameCamera = new GameCamera(this,0,0);
+
 		handler = new Handler(this);
+		gameCamera = new GameCamera(handler,0,0);
 		
+		howtoplayState = new HowToPlayState(handler);
 		gameState = new GameState(handler);
 		menuState = new MenuState(handler);
-		//State.setState(menuState);
-		State.setState(gameState);
+		
+		State.setState(menuState);
 		
 
 	}
@@ -118,9 +123,9 @@ public class Game implements Runnable{
 		
 		init();
 		
-		int fps = 60;
-		double timePerTick = 1000000000/fps; //the maximum amount of times in nano secs that we have to execute the tick and time method 
-		double delta =0;
+		int fps = 60; // fames per second, how many times we want update() to run
+		double timePerTick = 1000000000 / fps; //the maximum amount of times in nano secs that we have to execute the tick and time method 
+		double delta = 0;
 		long now;
 		long lastTime = System.nanoTime();
 		long timer = 0; //time until we get to 1sec
@@ -128,11 +133,11 @@ public class Game implements Runnable{
 		
 		while(running){
 			now = System.nanoTime(); //current time of the computer
-			delta += (now- lastTime)/ timePerTick;
-			timer += now - lastTime;
+			delta += (now - lastTime) / timePerTick;
+			timer += (now - lastTime);
 			lastTime = now;
 			
-			if(delta >=1 ){
+			if(delta >= 1 ){
 				update();
 				render();
 				ticks++;
@@ -140,9 +145,9 @@ public class Game implements Runnable{
 				
 			}
 			if(timer >= 1000000000){ //if more than 1 sec
-				System.out.println("Ticks and Frames: " + ticks);
-				ticks =0;
-				timer =0;
+				//System.out.println("Ticks and Frames: " + ticks);
+				ticks = 0;
+				timer = 0;
 			}
 		}
 		
@@ -152,6 +157,10 @@ public class Game implements Runnable{
 	
 	public KeyManager getKeyManager(){  //it will return the key manager so that other classes can access it
 		return keyManager;
+	}
+	
+	public MouseManager getMouseManager() {
+		return mouseManager;
 	}
 	
 	public GameCamera getGameCamera(){
@@ -174,8 +183,6 @@ public class Game implements Runnable{
 		this.height = height;
 	}
 	
-	
-	
 	public synchronized void start(){
 		if(running)
 			return;
@@ -191,9 +198,13 @@ public class Game implements Runnable{
 		try {
 			thread.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public void restart(){
+		display.getFrame().dispose();
+		run();
 	}
 }
