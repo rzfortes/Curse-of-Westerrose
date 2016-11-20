@@ -9,12 +9,12 @@ About the game:
 
 Background Story:
 
-	The fate of a village was plagued with a horrible curse. Failure to find the cure, the person decides to survive; not knowing that the plague will vanish within specified number of days. There will be different resources around the area that can help him survive. While monsters may appear in the area, the person may fight it with the weapons he made from some of the resources, or he may just run from it.
+	The fate of a village was plagued with a horrible curse. Failure to find the cure, the person decides to survive; not knowing that the plague will vanish within a specified number of days. There will be different resources around the area that can help him survive. While monsters may appear in the area, the person may fight it with the weapons he made from some of the resources, or he may just run from it.
 
 Game objective:
-	
-	The main goal of the player is to survive within a number of days. The player have to find food to eat and resources in order to survive. 
 
+	The main goal of the player is to survive within a number of days. The player have to find food to eat and resources in order to survive.
+	
 How the game works:
 
 	Along the way, the player will meet different people with clues on how to survive. Still there are no levels, but it will be indicated how many days was he able to survive. Initially, the player has 3 lives. If the player failed to defeat/run from the monster and the monster succeeds in reducing the player’s HP to zero, the player will return to the same day. The player will have his own hungry bar, initially full. The hungry bar will slowly depletes over time and depletes faster when he’s working. Once the hungry bar is depleted, his HP will be depleted instead until he will be able to eat again.
