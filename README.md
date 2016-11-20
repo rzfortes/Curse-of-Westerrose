@@ -15,11 +15,9 @@ Game objective:
 	
 	The main goal of the player is to survive within a number of days. The player have to find food to eat and resources in order to survive. 
 
-
 How the game works:
 
 	Along the way, the player will meet different people with clues on how to survive. Still there are no levels, but it will be indicated how many days was he able to survive. Initially, the player has 3 lives. If the player failed to defeat/run from the monster and the monster succeeds in reducing the player’s HP to zero, the player will return to the same day. The player will have his own hungry bar, initially full. The hungry bar will slowly depletes over time and depletes faster when he’s working. Once the hungry bar is depleted, his HP will be depleted instead until he will be able to eat again.
-
 	The player will be able to collect and earn items that will be helpful along his survival. Initially the player will have a bow and arrow for a weapon. The player will also be able to obtain different abilities, like increased stamina, and will be less hungry within the day. He will obtain these abilities depending how many days he survive. When the player dies, these will abilities will not reset to 0.
   
 Things that are in the game, as of now: 
@@ -47,8 +45,8 @@ Things to do (in one week):
 
 Group Members: 
 
-Micah Nicole Chu Im - https://github.com/micahnut
-Christine Anne Catubig - https://github.com/ChristineAnne
+Micah Nicole Chu Im - https://github.com/micahnut 
+Christine Anne Catubig - https://github.com/ChristineAnne 
 Rizelle Anne Bahin - https://github.com/rizelleann 
 
 This game serves as a Final Project requirement for CMSC 22 Introduction to Object-Oriented Programming under Sir Nico Martin A. Eñego. 
