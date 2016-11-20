@@ -34,12 +34,13 @@ reset to 0.
 
 
 Things that are in the game, as of now: 
-  ✓ Two worlds/map combined. 
-  ✓ Player's Hungry bar and Life bar added. Also, the present monster's and entities' (i.e. trees) life bar. 
-  ✓ Player is already able to eat fruits (the fresh and the rotten). 
-  ✓ Everytime a fresh fruit will be eaten, hungry bar increases. Once the player (accidentally) ate a rotten fruit, hungry bar will decrease by 8. 
-  ✓ Player is also able to defeat the present monsters. 
-  ✓ Items picked already in the inventory. 
+
+  - Two worlds/map combined. 
+  - Player's Hungry bar and Life bar added. Also, the present monster's and entities' (i.e. trees) life bar. 
+  - Player is already able to eat fruits (the fresh and the rotten). 
+  - Everytime a fresh fruit will be eaten, hungry bar increases. Once the player (accidentally) ate a rotten fruit, hungry bar will decrease by 8. 
+  - Player is also able to defeat the present monsters. 
+  - Items picked already in the inventory. 
 
 
 Things to do (in one week):
