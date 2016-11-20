@@ -26,8 +26,9 @@ Things to do (in one week):
 
 [Based on the latest Proposal]
 
-A mythical simulation game inspired from 'Don't Starve' survival game. 
-(https://www.kleientertainment.com/games/dont-starve) Written in Java Programming Language, with the help of CodeNMore's "New Beginner 2D Game Programming" video tutorial in YouTube. (https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ)
+A mythical simulation game inspired from 'Don't Starve' survival game.
+(https://www.kleientertainment.com/games/dont-starve)
+Written in Java Programming Language, with the help of CodeNMore's "New Beginner 2D Game Programming" video tutorial in YouTube. (https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ)
 
 About the game:
 
