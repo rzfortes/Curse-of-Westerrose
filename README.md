@@ -1,9 +1,33 @@
 # Westerrose
 
+Things that are in the game, as of now: 
+
+  - Two worlds/map combined. 
+  - Player's Hungry bar and Life bar added. Also, the present monster's and entities' (i.e. trees) life bar. 
+  - Player is already able to eat fruits (the fresh and the rotten). 
+  - Everytime a fresh fruit will be eaten, hungry bar increases. Once the player (accidentally) ate a rotten fruit, hungry bar will decrease by 8. 
+  - Player is also able to defeat the present monsters. 
+  - Items picked already in the inventory. 
+
+
+Things to do (in one week):
+
+  - Modify storyline of the game. Need to add more things that the player should do. 
+  - Add More Maps.
+  - Add background sounds. 
+  - Add more fruits and monsters. 
+  - Clarify the agenda of the player in the game. 
+  - Make 'Game Over' window or notif. 
+  - Video Presentation. 
+  - (and the things that are "pangit/bati" in the game. [IF THERE IS T_T] 
+  - Honest opinions/reactions/comments from other people para more ideas! :) Ajaaaa!
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
 [Based on the latest Proposal]
 
-A mythical simulation game inspired from 'Don't Starve' survival game. (https://www.kleientertainment.com/games/dont-starve)
-Written in Java Programming Language, with the help of CodeNMore's "New Beginner 2D Game Programming" video tutorial in YouTube. (https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ)
+A mythical simulation game inspired from 'Don't Starve' survival game. 
+(https://www.kleientertainment.com/games/dont-starve) Written in Java Programming Language, with the help of CodeNMore's "New Beginner 2D Game Programming" video tutorial in YouTube. (https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ)
 
 About the game:
 
@@ -32,35 +56,13 @@ and arrow for a weapon. The player will also be able to obtain different abiliti
 within the day. He will obtain these abilities depending how many days he survive. When the player dies, these will abilities will not
 reset to 0.
 
-
-Things that are in the game, as of now: 
-
-  - Two worlds/map combined. 
-  - Player's Hungry bar and Life bar added. Also, the present monster's and entities' (i.e. trees) life bar. 
-  - Player is already able to eat fruits (the fresh and the rotten). 
-  - Everytime a fresh fruit will be eaten, hungry bar increases. Once the player (accidentally) ate a rotten fruit, hungry bar will decrease by 8. 
-  - Player is also able to defeat the present monsters. 
-  - Items picked already in the inventory. 
-
-
-Things to do (in one week):
-
-  - Modify storyline of the game. Need to add more things that the player should do. 
-  - Add More Maps.
-  - Add background sounds. 
-  - Add more fruits and monsters. 
-  - Clarify the agenda of the player in the game. 
-  - Make 'Game Over' window or notif. 
-  - Video Presentation. 
-  - (and the things that are "pangit/bati" in the game. [IF THERE IS T_T] 
-  - Honest opinions/reactions/comments from other people para more ideas! :) Ajaaaa!
-
+--------------------------------------------------------------------------------------------------------------------------------------
 
 Group Members: 
 
-Micah Nicole Chu Im - https://github.com/micahnut
-Christine Anne Catubig - https://github.com/ChristineAnne
-Rizelle Anne Bahin - https://github.com/rizelleann 
+  Micah Nicole Chu Im - https://github.com/micahnut 
+  Christine Anne Catubig - https://github.com/ChristineAnne 
+  Rizelle Anne Bahin - https://github.com/rizelleann 
 
 This game serves as a Final Project requirement for CMSC 22 Introduction to Object-Oriented Programming under Sir Nico Martin A. Eñego. 
 
