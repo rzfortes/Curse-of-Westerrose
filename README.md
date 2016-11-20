@@ -11,9 +11,8 @@ Background Story:
 
 	The fate of a village was plagued with a horrible curse. Failure to find the cure, the person decides to survive; not knowing that the plague will vanish within specified number of days. There will be different resources around the area that can help him survive. While monsters may appear in the area, the person may fight it with the weapons he made from some of the resources, or he may just run from it.
 
-
 Game objective:
-
+	
 	The main goal of the player is to survive within a number of days. The player have to find food to eat and resources in order to survive. 
 
 
@@ -48,8 +47,8 @@ Things to do (in one week):
 
 Group Members: 
 
-Micah Nicole Chu Im - https://github.com/micahnut 
-Christine Anne Catubig - https://github.com/ChristineAnne 
+Micah Nicole Chu Im - https://github.com/micahnut
+Christine Anne Catubig - https://github.com/ChristineAnne
 Rizelle Anne Bahin - https://github.com/rizelleann 
 
 This game serves as a Final Project requirement for CMSC 22 Introduction to Object-Oriented Programming under Sir Nico Martin A. Eñego. 
