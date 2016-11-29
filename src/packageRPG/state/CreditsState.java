@@ -1,6 +1,10 @@
 package packageRPG.state;
 
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+
+import javax.imageio.ImageIO;
 
 import packageRPG.Handler;
 import packageRPG.gfx.Assets;
@@ -8,19 +12,19 @@ import packageRPG.ui.ClickListener;
 import packageRPG.ui.UIImageButton;
 import packageRPG.ui.UIManager;
 
-public class HowToPlayState extends State{
+public class CreditsState extends State{
 	private UIManager uiManager;
 	
-	public HowToPlayState(Handler handler, GameStateManager gsm) {
+	public CreditsState(Handler handler, GameStateManager gsm) {
 		super(handler, gsm);
 		uiManager = new UIManager(handler);
 		handler.getMouseManager().setUiManager(uiManager);
-		uiManager.addObject(new UIImageButton(560, 20, 64, 64, Assets.controls, new ClickListener() {
+		uiManager.addObject(new UIImageButton(560, 20, 64, 64, Assets.mainmenu, new ClickListener() {
 
 			@Override
 			public void onClick() {
 				handler.getMouseManager().setUiManager(null);
-				handler.getGame().getGameStateManager().setState(GameStateManager.CONTROLS);
+				handler.getGame().getGameStateManager().setState(GameStateManager.MENU);
 			}
 		}));
 	}
@@ -45,9 +49,10 @@ public class HowToPlayState extends State{
 
 	@Override
 	public void render(Graphics g) {
-		//g.drawImage(htp, 0, 0, 640, 380, null);
-
-		g.drawImage(Assets.bg, 0, 0, null);
+		
+		g.drawImage(Assets.creditsbg, 0, 0,  null);
+		
+		
 		
 		uiManager.render(g);
 
