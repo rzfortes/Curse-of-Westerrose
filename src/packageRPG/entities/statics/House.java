@@ -4,7 +4,6 @@ import java.awt.Graphics;
 
 import packageRPG.Handler;
 import packageRPG.gfx.Assets;
-import packageRPG.tiles.Tile;
 
 public class House extends StaticEntity{
 

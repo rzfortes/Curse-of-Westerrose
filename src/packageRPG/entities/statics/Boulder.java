@@ -8,7 +8,7 @@ import packageRPG.gfx.Assets;
 public class Boulder extends StaticEntity{
 
 	public Boulder(Handler handler, float x, float y) {
-		super(handler, x, y, 70, 100, 1000);
+		super(handler, x, y, 50, 80, 1000);
 		// TODO Auto-generated constructor stub
 	}
 

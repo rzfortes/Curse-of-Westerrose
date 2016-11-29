@@ -4,12 +4,11 @@ import java.awt.Graphics;
 
 import packageRPG.Handler;
 import packageRPG.gfx.Assets;
-import packageRPG.tiles.Tile;
 
 public class Fruits extends StaticEntity{
 
 	public Fruits(Handler handler, float x, float y) {
-		super(handler, x, y, 40,40, 1);
+		super(handler, x, y, 32,32, 1);
 		// TODO Auto-generated constructor stub
 	}
 

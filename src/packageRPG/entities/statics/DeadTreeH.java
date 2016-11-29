@@ -11,7 +11,7 @@ import packageRPG.items.Item;
 public class DeadTreeH extends StaticEntity{
 
 	public DeadTreeH(Handler handler, float x, float y) {
-		super(handler, x, y, 70,100,10);
+		super(handler, x, y, 50,80,10);
 		// TODO Auto-generated constructor stub
 	}
 

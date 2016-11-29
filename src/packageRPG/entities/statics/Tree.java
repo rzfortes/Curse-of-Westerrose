@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import packageRPG.Handler;
 import packageRPG.gfx.Assets;
 import packageRPG.items.Item;
-import packageRPG.tiles.Tile;
 
 public class Tree extends StaticEntity{
 
