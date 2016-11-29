@@ -8,12 +8,12 @@ public class DesertBorderTile extends Tile {
 
 	public DesertBorderTile(int id) {
 		super(Assets.desertBorder, id);
-		
+
 	}
+
 	@Override
-	public boolean isSolid(){
+	public boolean isSolid() {
 		return true;
 	}
 
-	
 }
