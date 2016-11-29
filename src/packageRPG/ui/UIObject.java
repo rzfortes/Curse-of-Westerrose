@@ -5,12 +5,12 @@ import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 
 public abstract class UIObject {
-	
+
 	protected float x, y;
 	protected int width, height;
 	protected boolean hovering = false;
 	protected Rectangle bounds;
-	
+
 	public UIObject(float x, float y, int width, int height) {
 		this.x = x;
 		this.y = y;
@@ -18,25 +18,27 @@ public abstract class UIObject {
 		this.height = height;
 		bounds = new Rectangle((int) x, (int) y, width, height);
 	}
-	
+
 	public abstract void update();
+
 	public abstract void render(Graphics g);
+
 	public abstract void onClick();
 
 	public void onMouseMove(MouseEvent e) {
-		if(bounds.contains(e.getX(), e.getY())) {
+		if (bounds.contains(e.getX(), e.getY())) {
 			hovering = true;
 		} else {
 			hovering = false;
 		}
 	}
-	
+
 	public void onMouseRelease(MouseEvent e) {
-		if(hovering) {
+		if (hovering) {
 			onClick();
 		}
 	}
-	
+
 	public float getX() {
 		return x;
 	}
@@ -76,7 +78,5 @@ public abstract class UIObject {
 	public void setHovering(boolean hovering) {
 		this.hovering = hovering;
 	}
-	
-	
 
 }
