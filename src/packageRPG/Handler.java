@@ -4,36 +4,40 @@ import packageRPG.gfx.GameCamera;
 import packageRPG.input.KeyManager;
 import packageRPG.input.MouseManager;
 import packageRPG.maps.Maps;
+import packageRPG.state.GameStateManager;
 
 public class Handler {
-	
+
 	private Game game;
 	private Maps map;
-	
-	public Handler(Game game){
+
+	public Handler(Game game) {
 		this.game = game;
 	}
-	
-	public GameCamera getGameCamera(){
+
+	public GameCamera getGameCamera() {
 		return game.getGameCamera();
 	}
-	
-	public KeyManager getKeyManager(){
+
+	public KeyManager getKeyManager() {
 		return game.getKeyManager();
 	}
-	
+
 	public MouseManager getMouseManager() {
 		return game.getMouseManager();
 	}
-	
-	public int getWidth(){
+
+	public GameStateManager getGameStateManager() {
+		return game.getGameStateManager();
+	}
+
+	public int getWidth() {
 		return game.getWidth();
 	}
-	
-	public int getHeight(){
+
+	public int getHeight() {
 		return game.getHeight();
 	}
-	
 
 	public Game getGame() {
 		return game;
@@ -50,6 +54,5 @@ public class Handler {
 	public void setMap(Maps map) {
 		this.map = map;
 	}
-	
-	
+
 }
