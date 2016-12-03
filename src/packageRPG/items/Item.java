@@ -123,6 +123,10 @@ public class Item {
 	public int getCount() {
 		return count;
 	}
+	
+	public void minusCount(){
+		count--;
+	}
 
 	public void setCount(int count) {
 		this.count = count;
