@@ -80,7 +80,7 @@ public class Inventory {
 	public void removeItem(Item item) {
 		for (Item i : inventoryItems) {
 			if (i.getId() == item.getId()) {
-				i.setCount(item.getCount() - 1);
+				i.minusCount();
 				return;
 			}
 		}
