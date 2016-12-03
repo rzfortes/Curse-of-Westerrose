@@ -27,7 +27,7 @@ public class Assets {
 	public static BufferedImage monster, treeMonster;
 
 	// land
-	public static BufferedImage path, h1, h2, h3, h4;
+	public static BufferedImage path, h2, h3, h4,hwallup,hwalll,hwallr,hwalld1,hwalld2,bed;
 	public static BufferedImage palmtree, tree2, bush, vine, dtree, cotton, dirtg;
 
 	// river
@@ -39,11 +39,17 @@ public class Assets {
 	public static BufferedImage yellowFlower, sign, puffyTree, slantTree, greenTree, shrubs, shrub2, forestLog;
 	public static BufferedImage grassRock, stump, log4, pineTree, trunk, root, hole, chunkRock, thinTree, chunkrock2;
 	public static BufferedImage pebbles, grassly, puffybush, purpleFlower;
+	public static BufferedImage forest_spirit, forest_pig, forest_plant;
+
 
 	// winter
 
-	public static BufferedImage winterTile, snowman1, snowman2, snowman3, snowman4,fire;
-	public static BufferedImage wTree1, wTree2, wTree3, wTree4, wTree5, wHouse1, wHouse2;
+	public static BufferedImage winterTile, snowman1, snowman2, snowman3, snowman4,fire,snowtreespree;
+	public static BufferedImage wTree1, wTree2, wTree3, wTree4, wTree5, wHouse1, wHouse2,wintreespree;
+	
+	//rocky
+	public static BufferedImage rockyTiles, bigRocks,wall,wallhalf;
+
 
 	public static void init() {
 		SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/textures/sheet.png"));
@@ -78,6 +84,18 @@ public class Assets {
 		SpriteSheet creditsheet = new SpriteSheet(ImageLoader.loadImage("/textures/credits.png"));
 		SpriteSheet gameoversheet = new SpriteSheet(ImageLoader.loadImage("/textures/GameOver.png"));
 		SpriteSheet firesheet = new SpriteSheet(ImageLoader.loadImage("/textures/fire.png"));
+		SpriteSheet rocky = new SpriteSheet(ImageLoader.loadImage("/textures/rocky copy.png"));
+		SpriteSheet house2 = new SpriteSheet(ImageLoader.loadImage("/textures/house2.png"));
+		SpriteSheet rockwall = new SpriteSheet(ImageLoader.loadImage("/textures/leftwall.png"));
+		SpriteSheet bedsheet = new SpriteSheet(ImageLoader.loadImage("/textures/bed.png"));
+		SpriteSheet wintrees = new SpriteSheet(ImageLoader.loadImage("/textures/wintree.png"));
+		SpriteSheet snowtrees = new SpriteSheet(ImageLoader.loadImage("/textures/snowtrees.png"));
+		SpriteSheet vinesheet = new SpriteSheet(ImageLoader.loadImage("/textures/vines.png"));
+		SpriteSheet cottonsheet = new SpriteSheet(ImageLoader.loadImage("/textures/cotton.png"));
+		SpriteSheet forestPlant = new SpriteSheet(ImageLoader.loadImage("/textures/fire_plant.png"));
+		SpriteSheet forestElder = new SpriteSheet(ImageLoader.loadImage("/textures/forest_elder.png"));
+		SpriteSheet forestPig = new SpriteSheet(ImageLoader.loadImage("/textures/piggy.png"));
+		
 		
 		menu1 = menusheet.crop(0, 0, 640, 360);
 		exit = new BufferedImage[2];
@@ -157,13 +175,20 @@ public class Assets {
 		bush = sheet3.crop(width * 6, 0, width, height);
 		vine = sheet3.crop(width * 5, height * 2, width, height);
 		dtree = sheet3.crop(width, height * 3, width * 2, height * 2);
-		cotton = sheet3.crop(width * 7, 0, width, height);
+		cotton = cottonsheet.crop(0, 0, width*3, height);
 
 		// house
-		h1 = sheet3.crop(width * 2, height, width * 3, height * 2);
 		h2 = house.crop(0, width, width * 2, height * 2);
 		h3 = house.crop(width * 2, height, width * 2, height * 2);
 		h4 = house.crop(0, height * 2, width * 2, height * 2);
+		
+		hwallup = house2.crop(0, 0, width*4, height);
+		hwalll = house2.crop(0, height*2, width, height*3);
+		hwallr = house2.crop(width*5, 0, width, height*3);
+		hwalld1= house2.crop(width, height*4, width*2, height*2);
+		hwalld2= house2.crop(width*4, height*4, width*2, height*2);
+		bed = bedsheet.crop(0, 0, width, height*2);
+		
 		
 		// crossing river
 		water = waterlight.crop(0, 0, width, height);
@@ -175,12 +200,12 @@ public class Assets {
 		orangetreeB = riversheet.crop(0, height * 3, width * 2, height * 2);
 		rock1 = riversheet.crop(width, height, width, height);
 		rock2 = riversheet.crop(width * 2, 0, width, height * 2);
-		cliff1 = riversheet.crop(width * 8, height*2, width, height*3);
-		cliff2 = riversheet.crop(width * 9, height, width, height*4);
-		vines = riversheet.crop(width * 2, height * 2, width, height * 2);
+		cliff1 = riversheet.crop(width * 7, 0, width, height*4);
+		cliff2 = riversheet.crop(width * 8, 0, width, height*4);
 		bush1 = riversheet.crop(width, 0, width, height);
 		log = riversheet.crop(width * 3, 0, width * 2, height);
 		vine2 = riversheet.crop(width * 5, 0, width, height * 2);
+		vines = vinesheet.crop(0, 0, 416, 64);
 
 		// start of forest
 		forest_tile = forest.crop(0, 0, width, height);
@@ -211,6 +236,9 @@ public class Assets {
 		puffybush = forest.crop(width * 7, height * 2, width, height);
 		purpleFlower = forest.crop(width * 7, height, width, height);
 
+		forest_spirit = forestElder.crop(0, 0, 56, 64);
+		forest_pig = forestPig.crop(0, 0, 64, 52);
+		forest_plant = forestPlant.crop(0, 0, 37, 64);
 		// end of forest
 
 		// winter
@@ -228,6 +256,16 @@ public class Assets {
 		wHouse1 = winterHouse.crop(width * 1, 0, 96, 96);
 		wHouse2 = winterHouse.crop(width * 4, 0, 96, 96);
 		fire = firesheet.crop(0, 0, 100, 100);
+		wintreespree = wintrees.crop(0, 0, 288, 140);
+		snowtreespree = snowtrees.crop(0, 0, 190, 120);
+		
+		//rocky
+		rockyTiles = rocky.crop(0, 0, width, height);
+	    bigRocks = rocky.crop(width*7, 0, width*5, height*3);
+	    wall = rockwall.crop(0, 0, width, height*8);
+	    wallhalf = rockwall.crop(width*3, 0, width, height*3);
+	    
+	    
 	}
 
 	public static int randInt() {
