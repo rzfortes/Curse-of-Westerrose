@@ -7,18 +7,16 @@ import java.util.Random;
 
 import packageRPG.Handler;
 import packageRPG.entities.Entity;
-
 import packageRPG.gfx.Assets;
-import packageRPG.items.Item;
 
-public class Monster extends Creature {
+public class ForestPlant extends Creature {
 
 	private static Random rand = new Random();
 
 	private long lastAttackTimer, attackCoolDown = 800, attackTimer = attackCoolDown;
 
-	public Monster(Handler handler, float x, float y) {
-		super(handler, x, y, Creature.DEFAULT_CREATURE_WIDTH * 2, Creature.DEFAULT_CREATURE_HEIGHT * 2, 10);
+	public ForestPlant(Handler handler, float x, float y, int i) {
+		super(handler, x, y, Creature.DEFAULT_CREATURE_WIDTH * 2 + i, Creature.DEFAULT_CREATURE_HEIGHT * 2 + i, 10);
 
 	}
 
@@ -55,21 +53,22 @@ public class Monster extends Creature {
 	@Override
 	public void render(Graphics g) {
 		// TODO Auto-generated method stub
-		g.drawImage(Assets.monster, (int) (x - handler.getGameCamera().getxOffset()),
+		g.drawImage(Assets.forest_plant, (int) (x - handler.getGameCamera().getxOffset()),
 				(int) (y - handler.getGameCamera().getyOffset()), width, height, null);
 		// health bar for the monster so that the player will be aware of
 		// monster's health
 		g.setColor(Color.black);
-		g.drawString("Spider Monster's health", 483, 305);
+		g.drawString("Fire Plant's health", 483, 45);
 
 		g.setColor(Color.gray);
-		g.fillRect(570, 310, 50, 10);
+		g.fillRect(570, 50, 50, 10);
 
 		g.setColor(Color.red);
-		g.fillRect(570, 310, this.health * 5, 10);
+		g.fillRect(570, 50, this.health * 5, 10);
 
 		g.setColor(Color.WHITE);
-		g.drawRect(570, 310, 50, 10);
+		g.drawRect(570, 50, 50, 10);
+
 
 	}
 
@@ -77,7 +76,8 @@ public class Monster extends Creature {
 	public void dead() {
 
 		System.out.println("monster :" + this.health);
-		handler.getMap().getItemManager().addItem(Item.rockITem.createNew((int) x, (int) y));
+		handler.getMap().getEntityManager().getPlayer().flagFPlant =0;
+
 
 	}
 

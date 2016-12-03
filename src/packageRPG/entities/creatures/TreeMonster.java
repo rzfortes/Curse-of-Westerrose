@@ -11,6 +11,10 @@ public class TreeMonster extends Creature {
 
 	public TreeMonster(Handler handler, float x, float y) {
 		super(handler, x, y, 250, 100, 10);
+		bounds.x = 10;
+		bounds.y = (int)(height / 1.5f);
+		bounds.width = width - 20;
+		bounds.height = (int)(height - height / 1.5f);
 	}
 
 	@Override
@@ -36,14 +40,11 @@ public class TreeMonster extends Creature {
 		g.fillRect(570, 280, 50, 10);
 
 		g.setColor(Color.black);
-		g.fillRect(570, 280, (int) (this.health * 2.5), 10);
+		g.fillRect(570, 280, (int) (this.health * 5), 10);
 
 		g.setColor(Color.WHITE);
 		g.drawRect(570, 280, 50, 10);
 
-		if (health == 0) {
-			g.drawImage(Assets.rock, 500, 330, 16, 16, null);
-		}
 
 	}
 

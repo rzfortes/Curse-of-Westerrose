@@ -33,6 +33,7 @@ public class Man extends Creature {
 	@Override
 	public void dead() {
 		System.out.println("yay");
+		}
 	}
 
-}
+
