@@ -5,11 +5,11 @@ import java.awt.Graphics;
 import packageRPG.Handler;
 import packageRPG.gfx.Assets;
 
-public class Cactus2 extends StaticEntity{
+public class SnowTrees extends StaticEntity{
 
-	public Cactus2(Handler handler, float x, float y) {
-		super(handler, x, y, 30, 45, 1000);
-		// TODO Auto-generated constructor stub'
+	public SnowTrees(Handler handler, float x, float y) {
+		super(handler, x, y, 192, 80, 1000);
+		// TODO Auto-generated constructor stub
 		bounds.x = 10;
 		bounds.y = (int)(height / 1.5f);
 		bounds.width = width - 20;
@@ -24,7 +24,7 @@ public class Cactus2 extends StaticEntity{
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(Assets.cactus2, (int)(x -handler.getGameCamera().getxOffset()), (int)(y - handler.getGameCamera().getyOffset()), width, height, null);
+		g.drawImage(Assets.snowtreespree, (int)(x -handler.getGameCamera().getxOffset()), (int)(y - handler.getGameCamera().getyOffset()), width, height, null);
 		
 	}
 
@@ -33,7 +33,5 @@ public class Cactus2 extends StaticEntity{
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
 
 }

@@ -1,13 +1,14 @@
 package packageRPG.entities.statics;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import packageRPG.Handler;
 import packageRPG.gfx.Assets;
 import packageRPG.tiles.Tile;
 
-public class DesertBush  extends StaticEntity {
-	public DesertBush(Handler handler, float x, float y) {
+public class QRock3  extends StaticEntity {
+	public QRock3(Handler handler, float x, float y) {
 		super(handler, x, y, 50,Tile.TILEHEIGHT, 1000);
 		// TODO Auto-generated constructor stub
 		bounds.x = 10;
@@ -24,8 +25,13 @@ public class DesertBush  extends StaticEntity {
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(Assets.desertbush, (int)(x -handler.getGameCamera().getxOffset()), (int)(y - handler.getGameCamera().getyOffset()), width, height, null);
+		g.drawImage(Assets.bigRock, (int)(x -handler.getGameCamera().getxOffset()), (int)(y - handler.getGameCamera().getyOffset()), width, height, null);
 		
+		if (handler.getMap().getEntityManager().getPlayer().flagQ3== 0){
+			g.setColor(Color.BLACK);
+			g.drawString("If you take 3 apples from a group of 5, "
+				      + "how many do you have?", 250, 120);
+		}
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import packageRPG.gfx.Assets;
 
 public class Cliff1 extends StaticEntity {
 	public Cliff1(Handler handler, float x, float y) {
-		super(handler, x, y, 32,32*3,1000);
+		super(handler, x, y, 32,32*4,1000);
 		// TODO Auto-generated constructor stub
 	}
 

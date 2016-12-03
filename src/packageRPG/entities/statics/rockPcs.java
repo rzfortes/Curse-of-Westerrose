@@ -6,7 +6,6 @@ import java.awt.Graphics;
 import packageRPG.Handler;
 import packageRPG.entities.statics.StaticEntity;
 import packageRPG.gfx.Assets;
-import packageRPG.tiles.Tile;
 
 public class rockPcs extends StaticEntity{
 

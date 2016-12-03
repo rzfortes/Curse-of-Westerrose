@@ -8,7 +8,7 @@ import packageRPG.gfx.Assets;
 public class Cotton extends StaticEntity{
 
 	public Cotton(Handler handler, float x, float y) {
-		super(handler, x, y, 45,45,1000);
+		super(handler, x, y, 32*3,32,1000);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -10,6 +10,10 @@ public class DesertBush3  extends StaticEntity {
 	public DesertBush3(Handler handler, float x, float y) {
 		super(handler, x, y, 50,Tile.TILEHEIGHT, 1000);
 		// TODO Auto-generated constructor stub
+		bounds.x = 10;
+		bounds.y = (int)(height / 1.5f);
+		bounds.width = width - 20;
+		bounds.height = (int)(height - height / 1.5f);
 	}
 
 	@Override

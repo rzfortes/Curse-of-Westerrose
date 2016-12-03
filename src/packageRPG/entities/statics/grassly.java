@@ -15,7 +15,7 @@ public class grassly extends StaticEntity{
 		bounds.x = 10;
 		bounds.y = (int)(height / 1.5f);
 		bounds.width = width - 20;
-		bounds.height = (int)(height - height / 1.5f);
+		bounds.height = (int)(height/ 1.5f);
 	}
 
 	@Override
