@@ -2,7 +2,6 @@ package packageRPG.state;
 
 import java.awt.Graphics;
 import java.io.InputStream;
-import packageRPG.sfx.Sound;
 
 import packageRPG.Handler;
 import packageRPG.maps.Maps;

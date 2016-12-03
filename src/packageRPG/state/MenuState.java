@@ -11,7 +11,6 @@ import packageRPG.ui.UIManager;
 
 public class MenuState extends State {
 
-	// private Handler handler;
 	private UIManager uiManager;
 
 	public MenuState(Handler handler, GameStateManager gsm) {

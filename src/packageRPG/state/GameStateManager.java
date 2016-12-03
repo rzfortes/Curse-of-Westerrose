@@ -2,8 +2,6 @@ package packageRPG.state;
 
 import java.awt.Graphics;
 
-import javax.swing.JOptionPane;
-
 import packageRPG.Handler;
 import packageRPG.sfx.Sound;
 

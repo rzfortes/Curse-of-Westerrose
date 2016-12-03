@@ -1,9 +1,6 @@
 package packageRPG.state;
 
 import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-
-import javax.imageio.ImageIO;
 
 import packageRPG.Handler;
 import packageRPG.gfx.Assets;
