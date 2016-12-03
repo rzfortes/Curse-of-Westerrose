@@ -5,14 +5,17 @@ import java.io.InputStream;
 
 import packageRPG.Handler;
 import packageRPG.entities.EntityManager;
+import packageRPG.entities.creatures.ForestPig;
+import packageRPG.entities.creatures.ForestPlant;
+import packageRPG.entities.creatures.ForestSpirit;
 import packageRPG.entities.creatures.Man;
 import packageRPG.entities.creatures.Man2;
 import packageRPG.entities.creatures.Monster;
 import packageRPG.entities.creatures.Player;
 import packageRPG.entities.creatures.TreeMonster;
+import packageRPG.entities.statics.Bed;
 import packageRPG.entities.statics.Boulder;
 import packageRPG.entities.statics.BridgeSign;
-import packageRPG.entities.statics.Bush;
 import packageRPG.entities.statics.Bushriver;
 import packageRPG.entities.statics.Cactus;
 import packageRPG.entities.statics.Cactus2;
@@ -23,19 +26,19 @@ import packageRPG.entities.statics.DeadTree;
 import packageRPG.entities.statics.DeadTreeH;
 import packageRPG.entities.statics.DesertBush;
 import packageRPG.entities.statics.DesertBush3;
-//import packageRPG.entities.statics.DirtG;
 import packageRPG.entities.statics.Fruits;
 import packageRPG.entities.statics.GreenVine;
-import packageRPG.entities.statics.House;
-import packageRPG.entities.statics.House2;
-import packageRPG.entities.statics.House4;
 import packageRPG.entities.statics.LongRock;
 import packageRPG.entities.statics.OrangeTree;
 import packageRPG.entities.statics.OrangeTree2;
+import packageRPG.entities.statics.QRock1;
+import packageRPG.entities.statics.QRock2;
+import packageRPG.entities.statics.QRock3;
 import packageRPG.entities.statics.RottenFruits;
 import packageRPG.entities.statics.SnowMan1;
 import packageRPG.entities.statics.SnowMan2;
 import packageRPG.entities.statics.SnowMan4;
+import packageRPG.entities.statics.SnowTrees;
 import packageRPG.entities.statics.Tree;
 import packageRPG.entities.statics.Well;
 import packageRPG.entities.statics.WinHouse1;
@@ -43,10 +46,25 @@ import packageRPG.entities.statics.WinHouse2;
 import packageRPG.entities.statics.WinTree1;
 import packageRPG.entities.statics.WinTree3;
 import packageRPG.entities.statics.WinTree4;
+import packageRPG.entities.statics.Wintrees;
+import packageRPG.entities.statics.bigRock;
+import packageRPG.entities.statics.flatRock;
+import packageRPG.entities.statics.flatRock2;
+import packageRPG.entities.statics.flatRock3;
+import packageRPG.entities.statics.flatRock4;
+import packageRPG.entities.statics.flatRock5;
+import packageRPG.entities.statics.flatRock6;
 import packageRPG.entities.statics.grassRock;
 import packageRPG.entities.statics.grassly;
 import packageRPG.entities.statics.greenTree;
 import packageRPG.entities.statics.hole;
+import packageRPG.entities.statics.houseDownW;
+import packageRPG.entities.statics.houseUpw;
+import packageRPG.entities.statics.houseleftW;
+import packageRPG.entities.statics.houserightW;
+import packageRPG.entities.statics.hwall;
+import packageRPG.entities.statics.leftWall;
+import packageRPG.entities.statics.leftWallh;
 import packageRPG.entities.statics.log4;
 import packageRPG.entities.statics.mushroom;
 import packageRPG.entities.statics.pebbles;
@@ -188,89 +206,67 @@ public class Maps {
 		entityManager.addEntity(new Cactus(handler, 1120, 400));
 		entityManager.addEntity(new DeadTreeH(handler, 1640, 630));
 
-		// crossing river part
+		// *******************************crossing river part
+		// ******************************//
 		entityManager.addEntity(new BridgeSign(handler, 1670 + 1180, 380));
 		entityManager.addEntity(new Man(handler, 1670 + 1185, 305));
 
-		entityManager.addEntity(new GreenVine(handler, 1670 + 850, 0));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 900, 0));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 950, 0));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 1000, 0));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 1050, 0));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 1100, 0));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 1150, 0));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 1150, 750));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 1100, 750));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 950, 750));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 900, 750));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 850, 750));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 1050, 750));
-		entityManager.addEntity(new GreenVine(handler, 1670 + 1000, 750));
+		entityManager.addEntity(new GreenVine(handler, 1670 + 800, 0));
+		entityManager.addEntity(new GreenVine(handler, 1670 + 800, 750));
+
 		entityManager.addEntity(new Tree(handler, 1670 + 900, 60));
 		entityManager.addEntity(new Tree(handler, 1670 + 1000, 60));
 		entityManager.addEntity(new Tree(handler, 1670 + 1100, 60));
-		entityManager.addEntity(new Tree(handler, 1670 + 900, 700));
-		entityManager.addEntity(new Tree(handler, 1670 + 1000, 700));
-		entityManager.addEntity(new Tree(handler, 1670 + 1100, 700));
-		entityManager.addEntity(new Cotton(handler, 1670 + 1080, 150));
-		
+		entityManager.addEntity(new Tree(handler, 1670 + 900, 600));
+		entityManager.addEntity(new Tree(handler, 1670 + 1000, 600));
+		entityManager.addEntity(new Tree(handler, 1670 + 1100, 600));
+
 		entityManager.addEntity(new RottenFruits(handler, 1670 + 1180, 180));
 		entityManager.addEntity(new Tree(handler, 1670 + 1080, 210));
 		entityManager.addEntity(new Tree(handler, 1670 + 950, 200));
 		entityManager.addEntity(new Tree(handler, 1670 + 950, 300));
 		entityManager.addEntity(new Tree(handler, 1670 + 1010, 380));
 		entityManager.addEntity(new Tree(handler, 1670 + 1010, 440));
-		entityManager.addEntity(new Tree(handler, 1670 + 970, 530));
-		entityManager.addEntity(new Fruits(handler, 1670 + 870, 560));
 		entityManager.addEntity(new Fruits(handler, 1670 + 1100, 570));
 
 		entityManager.addEntity(new LongRock(handler, 1670 + 900, 200));
 		entityManager.addEntity(new Bushriver(handler, 1670 + 870, 200));
 		entityManager.addEntity(new Bushriver(handler, 1670 + 870, 460));
-		entityManager.addEntity(new Bushriver(handler, 1670 + 900, 460));
 		entityManager.addEntity(new RottenFruits(handler, 1670 + 1100, 500));
-		entityManager.addEntity(new Well(handler, 1670 + 1100, 610));
+		entityManager.addEntity(new Well(handler, 1670 + 1100, 550));
 
 		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 0));
-		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 95));
-		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 190));
-		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 240)); //edit
-		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 380));
-		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 475));
-		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 570));
-		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 665));
-		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 760));
+		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 125));
+		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 210));
+		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 375));
+		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 500));
+		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 625));
+		entityManager.addEntity(new Cliff1(handler, 1670 + 1350, 720));
 		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 0));
 		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 125));
-		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 210));//edit
+		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 210));
 		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 375));
 		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 500));
 		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 625));
-		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 750));
+		entityManager.addEntity(new Cliff2(handler, 1670 + 1195, 720));
 
-
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1550, 0));
 		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1600, 0));
 		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1450, 0));
 		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1350, 0));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1650, 0));
+		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1550, 0));
 		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1500, 0));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1500, 20));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1550, 20));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1550, 80));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1550, 80));
+		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1650, 0));
+		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1700, 0));
 		entityManager.addEntity(new Bushriver(handler, 1670 + 1420, 30));
 		entityManager.addEntity(new Bushriver(handler, 1670 + 1450, 80));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1500, 730));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1400, 730));
+
+		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1410, 760));
 		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1350, 760));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1400, 760));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1600, 730));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1600, 760));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1460, 760));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1500, 760));
-		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1550, 760));
+		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1590, 760));
+		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1470, 760));
+		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1530, 760));
 		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1650, 760));
+		entityManager.addEntity(new OrangeTree2(handler, 1670 + 1700, 760));
 		entityManager.addEntity(new Bushriver(handler, 1670 + 1380, 400));
 		entityManager.addEntity(new LongRock(handler, 1670 + 1380, 500));
 		entityManager.addEntity(new Fruits(handler, 1670 + 1380, 450));
@@ -279,12 +275,12 @@ public class Maps {
 		entityManager.addEntity(new OrangeTree(handler, 1670 + 1380, 260));
 		entityManager.addEntity(new OrangeTree(handler, 1670 + 1410, 260));
 		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 260));
-		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 220));
-		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 180));
+		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 215));
+		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 170));
 		entityManager.addEntity(new OrangeTree(handler, 1670 + 1410, 360));
 		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 360));
-		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 390));
-		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 420));
+		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 395));
+		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 425));
 		entityManager.addEntity(new OrangeTree(handler, 1670 + 1440, 560));
 		entityManager.addEntity(new OrangeTree(handler, 1670 + 1470, 560));
 		entityManager.addEntity(new OrangeTree(handler, 1670 + 1500, 560));
@@ -303,15 +299,16 @@ public class Maps {
 		entityManager.addEntity(new Fruits(handler, 1670 + 1610, 300));
 		entityManager.addEntity(new Fruits(handler, 1670 + 1550, 300));
 		entityManager.addEntity(new RottenFruits(handler, 1670 + 1650, 80));
+		entityManager.addEntity(new Tree(handler,1670 + 1650,600));
+		entityManager.addEntity(new Tree(handler,1670 + 1550,600));
+		
 
-		// end of river part
+		// ********************************end of river part
+		// ***************************///
 
-		// town map//house part
+		// ********************************town
+		// part************************************//
 		int i, j = 1672, scale = 32 / 3, ctr = 0;
-		// bush
-		entityManager.addEntity(new Bush(handler, 150 + 1670 + 1670 + 1670, 490));
-		entityManager.addEntity(new Bush(handler, 150 + 1670 + 1670 + 1670, 550));
-		entityManager.addEntity(new Bush(handler, 150 + 1670 + 1670 + 1670, 610));
 
 		// deadtree
 		entityManager.addEntity(new DeadTreeH(handler, 290 + 1670 + 1670 + 1670, 450));
@@ -325,20 +322,24 @@ public class Maps {
 		entityManager.addEntity(new Fruits(handler, 360 + 1670 + 1670 + 1680, 540));
 		entityManager.addEntity(new Fruits(handler, 315 + 1670 + 1670 + 1680, 620));
 		entityManager.addEntity(new Fruits(handler, 360 + 1670 + 1670 + 1680, 620));
-
-		// vine
-		entityManager.addEntity(new House4(handler, 210 + 1630 + 1630 + 1630 + 150,180));
+		
+		//house
+		entityManager.addEntity(new houseleftW(handler, 210 + 1630 + 1630 + 1630 + 150, 230));
+		entityManager.addEntity(new houseUpw(handler, 210 + 1630 + 1630 + 1630 + 150, 230));
+		entityManager.addEntity(new houserightW(handler, 210 + 1630 + 1630 + 1630 + 150 + 145, 230));
 
 		// cotton
 		entityManager.addEntity(new Cotton(handler, 220 + 1670 + 1670 + 1670, 40));
-		entityManager.addEntity(new Cotton(handler, 280 + 1670 + 1670 + 1670, 40));
-		entityManager.addEntity(new Cotton(handler, 330 + 1670 + 1670 + 1670, 40));
-		entityManager.addEntity(new Cotton(handler, 380 + 1670 + 1670 + 1670, 40));
 
 		// house
-		entityManager.addEntity(new House(handler, 650 + 1570 + 1570 + 1570 + 273, 60));
-		entityManager.addEntity(new Tree(handler, 380 + 1670 + 1670 + 1670 + 185, 60));
-		entityManager.addEntity(new House2(handler, 400 + 1570 + 1570 + 1580, 60));
+		entityManager.addEntity(new houseleftW(handler, 650 + 1570 + 1570 + 1570 + 273, 60));
+		entityManager.addEntity(new houseUpw(handler, 650 + 1570 + 1570 + 1570 + 273, 60));
+		entityManager.addEntity(new houserightW(handler, 650 + 1570 + 1570 + 1570 + 273 + 145, 60));
+		entityManager.addEntity(new houseDownW(handler, 650 + 1570 + 1570 + 1570 + 273, 60 + 128));
+		entityManager.addEntity(new houseDownW(handler, 650 + 1570 + 1570 + 1570 + 273 + 140, 60 + 128));
+		entityManager.addEntity(new Bed(handler, 650 + 1570 + 1570 + 1570 + 273 + 130, 70));
+
+		entityManager.addEntity(new Tree(handler, 380 + 1670 + 1670 + 1670 + 100, 60));
 
 		// trees part
 		entityManager.addEntity(new Tree(handler, 745 + 1600 + 1600 + 1600 + 200, 370));
@@ -348,17 +349,17 @@ public class Maps {
 		entityManager.addEntity(new Tree(handler, 660 + 1600 + 1600 + 1600 + 200, 500));
 		entityManager.addEntity(new Tree(handler, 745 + 1600 + 1600 + 1600 + 200, 500));
 
-		// end of town part
+		// ****************************************end of town
+		// part*****************************//
 
 		// forest part
-		
-		
+
 		int movex = 3398;
 		j = movex;
 		for (i = -32; i < 594; i += 32, ctr++) { // left forest border
 			if (ctr % 2 == 0) {
 				entityManager.addEntity(new greenTree(handler, j, i, scale));
-				
+
 			} else {
 				entityManager.addEntity(new greenTree(handler, j + 30, i, scale));
 			}
@@ -375,9 +376,10 @@ public class Maps {
 		}
 
 		for (i = -32, j = movex; j < 5056; j += 32, ctr++) { // upper trees
+																// //lower
 			if (ctr % 2 == 0) {
 				entityManager.addEntity(new greenTree(handler, j, i + 60, scale));
-				entityManager.addEntity(new greenTree(handler, j, 800, scale));
+				entityManager.addEntity(new greenTree(handler, j, 800, scale)); // lower
 				entityManager.addEntity(new greenTree(handler, j, 800 - 60, scale));
 			} else {
 				entityManager.addEntity(new greenTree(handler, j, i + 30, scale));
@@ -433,12 +435,12 @@ public class Maps {
 		}
 
 		entityManager.addEntity(new puffyBush(handler, 3540 + 64 * 4, 200, -13));
-	
+
 		j = 64;
 		i = 1800;
 		entityManager.addEntity(new Man2(handler, 3900, 60));
-		entityManager.addEntity(new rockPcs(handler, 3540,75,scale));
-		
+		entityManager.addEntity(new rockPcs(handler, 3540, 75, scale));
+
 		j += 150;
 
 		entityManager.addEntity(new puffyTree(handler, 3553 + 763, 300, scale * 10));
@@ -504,34 +506,202 @@ public class Maps {
 		entityManager.addEntity(new grassly(handler, 3719, 626, 0));
 		entityManager.addEntity(new grassly(handler, 3767, 626, 0));
 
+		entityManager.addEntity(new grassly(handler, 3767 - 48, 626, 0));
+		entityManager.addEntity(new grassly(handler, 3767 + 48, 626, 0));
+		entityManager.addEntity(new grassly(handler, 3767 + 96, 626, 0));
+
+		entityManager.addEntity(new grassly(handler, 3628, 565, 0));
+		entityManager.addEntity(new grassly(handler, 3679, 565, 0));
+		entityManager.addEntity(new grassly(handler, 3718, 565, 0));
+		entityManager.addEntity(new grassly(handler, 3766, 565, 0));
+		entityManager.addEntity(new grassly(handler, 3817, 565, 0));
+		entityManager.addEntity(new grassly(handler, 3862, 565, 0));
+
+		entityManager.addEntity(new grassly(handler, 3535, 310, 0));
+		entityManager.addEntity(new grassly(handler, 3535, 346, 0));
+		entityManager.addEntity(new grassly(handler, 3535, 382, 0));
+		entityManager.addEntity(new grassly(handler, 3535, 409, 0));
+		entityManager.addEntity(new grassly(handler, 3535, 442, 0));
+		entityManager.addEntity(new grassly(handler, 3535, 442 + 32, 0));
+		entityManager.addEntity(new grassly(handler, 3535, 442 + 64, 0));
+		entityManager.addEntity(new grassly(handler, 3535, 442 + 128, 0));
+		entityManager.addEntity(new grassly(handler, 3535, 442 + 256, 0));
+
+		entityManager.addEntity(new grassly(handler, 3535, 694, 0));
+		entityManager.addEntity(new grassly(handler, 3622, 442 + 256, 0));
+		entityManager.addEntity(new grassly(handler, 3673, 442 + 256, 0));
+		entityManager.addEntity(new grassly(handler, 3712, 442 + 256, 0));
+		entityManager.addEntity(new grassly(handler, 3766, 442 + 256, 0));
+		entityManager.addEntity(new grassly(handler, 3811, 442 + 256, 0));
+		entityManager.addEntity(new grassly(handler, 3865, 442 + 256, 0));
+
+		entityManager.addEntity(new purpleFlower(handler, 3997, 427, -16));
+		entityManager.addEntity(new purpleFlower(handler, 4048, 427, -16));
+		entityManager.addEntity(new purpleFlower(handler, 4090, 427, -16));
+
+		entityManager.addEntity(new purpleFlower(handler, 4705, 427, -16));
+		entityManager.addEntity(new purpleFlower(handler, 4756, 427, -16));
+		entityManager.addEntity(new purpleFlower(handler, 4804, 427, -16));
+		///////
+		entityManager.addEntity(new grassly(handler, 3616, 337, 0));
+		entityManager.addEntity(new grassly(handler, 3616, 304, 0));
+		entityManager.addEntity(new grassly(handler, 3616, 409, 0));
+		entityManager.addEntity(new grassly(handler, 3616, 436, 0));
+		entityManager.addEntity(new grassly(handler, 3616, 469, 0));
+		entityManager.addEntity(new grassly(handler, 3616, 499, 0));
+
+		entityManager.addEntity(new grassly(handler, 3676, 529, 0));
+		entityManager.addEntity(new grassly(handler, 3661, 465, 0));
+		entityManager.addEntity(new grassly(handler, 3718, 496, 0));
+		entityManager.addEntity(new grassly(handler, 3718, 430, 0));
+		entityManager.addEntity(new grassly(handler, 3661, 415, 0));
+
+		entityManager.addEntity(new grassly(handler, 3661, 376, 0));
+		entityManager.addEntity(new grassly(handler, 3661 + 33, 376, 0));
+		entityManager.addEntity(new grassly(handler, 3661 + 66, 376, 0));
+		entityManager.addEntity(new grassly(handler, 3661 + 99, 376, 0));
+		entityManager.addEntity(new grassly(handler, 3661 + 132, 376, 0));
+		entityManager.addEntity(new grassly(handler, 3661 + 165, 376, 0));
+		entityManager.addEntity(new grassly(handler, 3661 + 198, 376, 0));
+
+		entityManager.addEntity(new grassly(handler, 3862, 376 + 33, 0));
+		entityManager.addEntity(new grassly(handler, 3862, 376 + 66, 0));
+		entityManager.addEntity(new grassly(handler, 3862, 376 + 99, 0));
+		entityManager.addEntity(new grassly(handler, 3862, 376 + 132, 0));
+		entityManager.addEntity(new grassly(handler, 3862, 376 + 165, 0));
+
+		entityManager.addEntity(new grassly(handler, 3535, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3535 + 33, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3535 + 66, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3535 + 99, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3535 + 132, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3535 + 165, 241, 0));
+
+		entityManager.addEntity(new grassly(handler, 3700, 241 - 33, 0));
+		entityManager.addEntity(new grassly(handler, 3700, 241 - 66, 0));
+		entityManager.addEntity(new grassly(handler, 3700, 241 - 99, 0));
+		entityManager.addEntity(new grassly(handler, 3700, 241 - 132, 0));
+
+		entityManager.addEntity(new grassly(handler, 3790, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3790 + 33, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3790 + 66, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3790 + 99, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3790 + 132, 241, 0));
+		entityManager.addEntity(new grassly(handler, 3790 + 165, 241, 0));
+
+		entityManager.addEntity(new grassly(handler, 4147, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 33, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 66, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 99, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 132, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 165, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 198, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 231, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 264, 0));
+		entityManager.addEntity(new grassly(handler, 4147, 556 - 297, 0));
+
+		entityManager.addEntity(new grassly(handler, 4147 + 33, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 66, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 99, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 132, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 165, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 198, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 231, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 264, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 297, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 330, 556, 0));
+		
+		////end of rica ////
+		
+		entityManager.addEntity(new grassly(handler, 4147 + 33, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 66, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 99, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 132, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 165, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 198, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 231, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 264, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 297, 556- 297, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 330, 556- 297, 0));
+		
+		entityManager.addEntity(new grassly(handler, 4547, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 33, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 66, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 99, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 132, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 165, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 198, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 231, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 264, 0));
+		entityManager.addEntity(new grassly(handler, 4547, 556 - 297, 0));
+		
+		entityManager.addEntity(new grassly(handler, 4547 + 33, 556 - 297, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 66, 556 - 297, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 99, 556 - 297, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 132,556 - 297, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 165, 556 - 297, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 198,556 - 297, 0));
+		
+		
+		entityManager.addEntity(new grassly(handler, 4547 + 33, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 66, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 99, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 132,556, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 165, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4547 + 198,556, 0));
+		
+		entityManager.addEntity(new grassly(handler, 4847, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 33, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 66, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 99, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 132, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 165, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 198, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 231, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 264, 0));
+		entityManager.addEntity(new grassly(handler, 4847, 556 - 297, 0));
+		
+		entityManager.addEntity(new grassly(handler, 4747 + 132,556, 0));
+		entityManager.addEntity(new grassly(handler, 4747 + 165, 556, 0));
+		entityManager.addEntity(new grassly(handler, 4747 + 198,556, 0));
+		entityManager.addEntity(new grassly(handler, 4747 + 231,556, 0));
+		
+		entityManager.addEntity(new grassly(handler, 4147 + 231,593, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 231,626, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 231,659, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 231,692, 0));
+		entityManager.addEntity(new grassly(handler, 4147 + 231,725, 0));
+		
+		entityManager.addEntity(new grassly(handler, 4747,70, 0));
+		entityManager.addEntity(new grassly(handler, 4747,103, 0));
+		entityManager.addEntity(new grassly(handler, 4747,136, 0));
+		entityManager.addEntity(new grassly(handler, 4747,169, 0));
+		entityManager.addEntity(new grassly(handler, 4747,202, 0));
+		entityManager.addEntity(new grassly(handler, 4747,235, 0));
+		
+		entityManager.addEntity(new grassly(handler, 3947, 241 - 33, 0));
+		entityManager.addEntity(new grassly(handler, 3947, 241 - 66, 0));
+		entityManager.addEntity(new grassly(handler, 3947, 241 - 99, 0));
+		entityManager.addEntity(new grassly(handler, 3947, 241 - 132, 0));
+		entityManager.addEntity(new grassly(handler, 3947, 241 - 165, 0));
+		
+
+		// monster
+		entityManager.addEntity(new ForestPig(handler, 4297, 106, -25));
+		entityManager.addEntity(new ForestSpirit(handler, 4954, 358));
+		entityManager.addEntity(new ForestPlant(handler, 3913, 589, -25));
+		
 		// end of forest
 		// --------------------------------- winter map
 		// -------------------------------------------------
 
 		// 4145
 		// entrance trees
-		entityManager.addEntity(new WinTree1(handler, 2630 + 1600 + 1600 + 170 + 20, 300));
-		entityManager.addEntity(new WinTree1(handler, 2660 + 1600 + 1600 + 170 + 20, 300));
-		entityManager.addEntity(new WinTree1(handler, 2690 + 1600 + 1600 + 170 + 20, 300));
-		entityManager.addEntity(new WinTree1(handler, 2710 + 1600 + 1600 + 170 + 20, 300));
-		entityManager.addEntity(new WinTree1(handler, 2740 + 1600 + 1600 + 170 + 20, 300));
-		entityManager.addEntity(new WinTree1(handler, 2770 + 1600 + 1600 + 170 + 20, 300));
-		entityManager.addEntity(new WinTree1(handler, 2800 + 1600 + 1600 + 170 + 20, 300));
-
+		entityManager.addEntity(new Wintrees(handler, 2630 + 1600 + 1600 + 170 + 20, 300));
 		entityManager.addEntity(new Fruits(handler, 2710 + 1600 + 1600 + 170, 370));
 
-		entityManager.addEntity(new WinTree1(handler, 2510 + 1600 + 1600 + 170, 400));
-		entityManager.addEntity(new WinTree1(handler, 2540 + 1600 + 1600 + 170, 405));
-		entityManager.addEntity(new WinTree1(handler, 2570 + 1600 + 1600 + 170, 400));
-		entityManager.addEntity(new WinTree1(handler, 2600 + 1600 + 1600 + 170, 405));
-		entityManager.addEntity(new WinTree1(handler, 2630 + 1600 + 1600 + 170, 400));
-		entityManager.addEntity(new WinTree1(handler, 2630 + 20 + 1600 + 1600 + 170, 405));
-		entityManager.addEntity(new WinTree1(handler, 2660 + 20 + 1600 + 1600 + 170, 400));
-		entityManager.addEntity(new WinTree1(handler, 2690 + 20 + 1600 + 1600 + 170, 405));
-		entityManager.addEntity(new WinTree1(handler, 2710 + 20 + 1600 + 1600 + 170, 400));
-		entityManager.addEntity(new WinTree1(handler, 2740 + 20 + 1600 + 1600 + 170, 405));
-		entityManager.addEntity(new WinTree1(handler, 2770 + 20 + 1600 + 1600 + 170, 400));
-		entityManager.addEntity(new WinTree1(handler, 2800 + 20 + 1600 + 1600 + 170, 405));
+		entityManager.addEntity(new Wintrees(handler, 2510 + 1600 + 1600 + 170, 400));
+		entityManager.addEntity(new Wintrees(handler, 2510 + 1600 + 1600 + 170 + 280, 400));
 
 		// upper right house
 		entityManager.addEntity(new WinHouse1(handler, 3000 + 1600 + 1600 + 170, 100));
@@ -557,13 +727,12 @@ public class Maps {
 
 		// scatter
 		entityManager.addEntity(new WinTree3(handler, 3000 + 1600 + 1600 + 170, 500));
-		entityManager.addEntity(new WinTree3(handler, 2720 + 1600 + 1600 + 170, 115));
-		entityManager.addEntity(new WinTree3(handler, 2650 + 1600 + 1600 + 170, 110));
-		entityManager.addEntity(new WinTree3(handler, 2700 + 1600 + 1600 + 170, 100));
+		entityManager.addEntity(new SnowTrees(handler, 2720 + 1600 + 1600 + 100, 115));
 
 		entityManager.addEntity(new WinTree3(handler, 2700 + 1600 + 1600 + 170, 600));
 		entityManager.addEntity(new WinTree3(handler, 2750 + 1600 + 1600 + 170, 620));
 		entityManager.addEntity(new WinTree3(handler, 2600 + 1600 + 1600 + 170, 610));
+
 		entityManager.addEntity(new WinTree1(handler, 2640 + 1600 + 1600 + 170, 595));
 		entityManager.addEntity(new Fruits(handler, 2700 + 1600 + 1600 + 170, 670));
 
@@ -575,16 +744,78 @@ public class Maps {
 
 		entityManager.addEntity(new WinTree4(handler, 3110 + 1600 + 1600 + 170, 200));
 		entityManager.addEntity(new Fruits(handler, 3090 + 1600 + 1600 + 170, 250));
-		
-		entityManager.addEntity(new rockPcs(handler, 3110+1600+1600+160, 290, scale));
+
+		entityManager.addEntity(new rockPcs(handler, 3110 + 1600 + 1600 + 160, 290, scale));
+
+		// **********************rocky map*************************///
+
+		// down
+
+		entityManager.addEntity(new bigRock(handler, 1675 + 10, 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 + 20, 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 * 2 + 20, 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 * 3 + 20, 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 * 4 + 20, 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 * 5 + 20, 1));
+		// up
+		entityManager.addEntity(new bigRock(handler, 1675 + 10, 750 + 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 + 20, 750 + 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 * 2 + 20, 750 + 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 * 3 + 20, 750 + 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 * 4 + 20, 750 + 1));
+		entityManager.addEntity(new bigRock(handler, 1675 + 128 * 5 + 20, 750 + 1));
+		//
+		// entityManager.addEntity(new Boulder(handler, 1730, 450));
+		entityManager.addEntity(new Boulder(handler, 1760, 420));
+		entityManager.addEntity(new Boulder(handler, 1780, 450));
+
+		entityManager.addEntity(new Boulder(handler, 1900, 200));
+		entityManager.addEntity(new Boulder(handler, 1850, 250));
+
+		entityManager.addEntity(new Boulder(handler, 2200, 200));
+		entityManager.addEntity(new Boulder(handler, 1950, 250));
+
+		entityManager.addEntity(new QRock1(handler, 2000, 350));
+		entityManager.addEntity(new QRock2(handler, 2050, 350));
+		entityManager.addEntity(new QRock3(handler, 2100, 350));
+		entityManager.addEntity(new flatRock5(handler, 2050, 450));
+
+		entityManager.addEntity(new flatRock4(handler, 2250, 350));
+		entityManager.addEntity(new DeadTree(handler, 2300, 350));
+
+		entityManager.addEntity(new Boulder(handler, 2000, 205));
+		entityManager.addEntity(new Boulder(handler, 2050, 220));
+
+		entityManager.addEntity(new flatRock3(handler, 2060, 650));
+		entityManager.addEntity(new flatRock2(handler, 1890, 605));
+		entityManager.addEntity(new flatRock4(handler, 2000, 650));
+		entityManager.addEntity(new flatRock6(handler, 2200, 650));
+		entityManager.addEntity(new flatRock(handler, 2050, 605));
+		entityManager.addEntity(new Fruits(handler, 2040, 630));
+
+		entityManager.addEntity(new Boulder(handler, 2350, 500));
+		entityManager.addEntity(new Boulder(handler, 2320, 550));
+		entityManager.addEntity(new Boulder(handler, 2390, 560));
+
+		entityManager.addEntity(new RottenFruits(handler, 1800, 680));
+		entityManager.addEntity(new RottenFruits(handler, 1950, 200));
+		entityManager.addEntity(new DeadTree(handler, 2350, 60));
+		entityManager.addEntity(new DeadTree(handler, 2300, 80));
+		entityManager.addEntity(new Fruits(handler, 2400, 300));
+
+		entityManager.addEntity(new leftWall(handler, 2475, 0));
+		entityManager.addEntity(new leftWall(handler, 2475, 576));
+		entityManager.addEntity(new leftWallh(handler, 2475, 420));
+		entityManager.addEntity(new leftWallh(handler, 2475, 200));
+		entityManager.addEntity(new hwall(handler, 2475, 360)); // todelete
 
 		loadMaps(in);
 
-		entityManager.getPlayer().setX(spawnX);
-		entityManager.getPlayer().setY(spawnY);
+		 entityManager.getPlayer().setX(spawnX);
+		 entityManager.getPlayer().setY(spawnY);
 
-		 //entityManager.getPlayer().setX(2550);
-		// entityManager.getPlayer().setY(310);
+		//entityManager.getPlayer().setX(2547);
+		//entityManager.getPlayer().setY(137);
 	}
 
 	public void update() {
