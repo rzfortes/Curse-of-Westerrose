@@ -1,7 +1,5 @@
 package packageRPG.tiles;
 
-import java.awt.image.BufferedImage;
-
 import packageRPG.gfx.Assets;
 
 public class DesertBorderTile extends Tile {

@@ -15,6 +15,7 @@ public class Tile {
 	public static Tile waterTile = new WaterTile(6);
 	public static Tile bridgeTile = new BridgeTile(7);
 	public static Tile winter = new WinterTile(8);
+	public static Tile rockyTile = new RockyTile(9);
 
 	// Class
 	public static final int TILEWIDTH = 42;
