@@ -1,7 +1,5 @@
 # Westerrose
 
---------------------------------------------------------------------------------------------------------------------------------------
-
 [Based on the latest Proposal]
 
 A mythical simulation game inspired from, 'Don't Starve' survival game. 
