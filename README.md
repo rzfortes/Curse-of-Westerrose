@@ -24,6 +24,26 @@ Along the way, the player will meet different people with clues on how to surviv
 The player will be able to collect and earn items that will be helpful along his survival. Initially the player will have a bow and arrow for a weapon. The player will also be able to obtain different abilities, like increased stamina, and will be less hungry within the day. He will obtain these abilities depending how many days he survive. When the player dies, these will abilities will not reset to 0.
 
 --------------------------------------------------------------------------------------------------------------------------------------
+## Main Menu
+![Menu](https://github.com/rzfortes/Curse-of-Westerrose/blob/master/mainmenu.png)
+This is a screenshot of the main menu. <br/>
+
+## Controls
+![Controls](https://github.com/rzfortes/Curse-of-Westerrose/blob/master/controls.png)
+Just follow the controls. <br/>
+
+## How to play
+![howto](https://github.com/rzfortes/Curse-of-Westerrose/blob/master/howtoplay.png)
+Read the instructions. <br>
+
+Now you are ready to play ! <br>
+
+## Screen record of actual game play
+
+![Mainmenu](https://github.com/rzfortes/Curse-of-Westerrose/blob/master/mainmenu.gif)
+<br/>
+![gameplay](https://github.com/rzfortes/Curse-of-Westerrose/blob/master/gameplay.gif)
+
 
 ##### Group Members: 
 
